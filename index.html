@@ -1,0 +1,122 @@
+<html>
+
+<head>
+    <title>Desk name sign</title>
+    <!-- <link rel="stylesheet" href="https://use.typekit.net/ooq5ezx.css"> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+Mono:wght@700&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            /* font-family: neue-haas-grotesk-text, sans-serif; */
+            font-family: 'Inter', sans-serif;
+        }
+
+        .nametag {
+            height: 64mm;
+            width: 215mm;
+            margin: 3em auto;
+            position: relative;
+            border: .5em solid white;
+            display: flex;
+            outline: 1em solid white;
+            outline-offset: -1em;
+        }
+
+        .nametag:before,
+        .nametag:after {
+            position: absolute;
+            content: '';
+            border: solid black;
+            z-index: -1;
+        }
+
+        .nametag:before {
+            top: -2em;
+            bottom: -2em;
+            left: 0;
+            right: 0;
+            border-width: 0 1px;
+        }
+
+        .nametag:after {
+            left: -2em;
+            right: -2em;
+            top: 0;
+            bottom: 0;
+            border-width: 1px 0;
+        }
+
+        .name {
+            align-self: stretch;
+            flex-grow: 1;
+
+            font-size: 1.8cm;
+            font-weight: 700;
+            line-height: 105%;
+
+            margin: 0.7cm 0.8cm;
+
+        }
+
+        .details {
+            width: 4.5cm;
+            font-weight: 600;
+            color: #2E75B6;
+        }
+
+        .labpi {
+            margin: 1cm 0 0;
+            font-size: 0.7cm;
+            line-height: 105%;
+        }
+
+        .lab {
+            font-size: 0.7cm;
+            font-weight: normal;
+        }
+
+        .location {
+            font-size: 2.75cm;
+            margin: 3mm 0 0 -1.7mm;
+            line-height: 100%;
+
+            /* font-family: interstate-mono, monospace; */
+            font-family: 'Noto Sans Mono', monospace;
+            font-weight: 700;
+            font-style: normal;
+            letter-spacing: -2mm;
+        }
+
+        .instructions {
+            text-align: center;
+            margin-top: 10mm;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="nametag">
+        <div class="name" contenteditable="true">
+            Simeon<br>Wong
+        </div>
+        <div class="details">
+            <div class="labpi" contenteditable="true">
+                Ibrahim
+            </div>
+            <div class="lab" contenteditable="true">Lab</div>
+            <div class="location" contenteditable="true">
+                P1
+            </div>
+        </div>
+    </div>
+
+    <p class="instructions">
+        <b>Download to your computer before editing.</b> This template was optimized for Microsoft Edge or Google Chrome. Print in Landscape at 100% size.
+    </p>
+</body>
+
+</html>
