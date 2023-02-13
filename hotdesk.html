@@ -1,0 +1,149 @@
+<html>
+
+<head>
+    <title>Desk name sign</title>
+    <!-- <link rel="stylesheet" href="https://use.typekit.net/ooq5ezx.css"> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+Mono:wght@700&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            /* font-family: neue-haas-grotesk-text, sans-serif; */
+            font-family: 'Inter', sans-serif;
+            max-width: 10in;
+            max-height: 7.5in;
+        }
+
+        .nametag {
+            height: 64mm;
+            width: 215mm;
+            margin: 3em auto;
+            position: relative;
+            border: .5em solid white;
+            display: flex;
+            outline: 1em solid white;
+            outline-offset: -1em;
+        }
+
+        .nametag:before,
+        .nametag:after {
+            position: absolute;
+            content: '';
+            border: solid black;
+            z-index: -1;
+        }
+
+        .nametag:before {
+            top: -2em;
+            bottom: -2em;
+            left: 0;
+            right: 0;
+            border-width: 0 0.5px;
+        }
+
+        .nametag:after {
+            left: -2em;
+            right: -2em;
+            top: 0;
+            bottom: 0;
+            border-width: 0.5px 0;
+        }
+
+        .name {
+            align-self: stretch;
+            flex-grow: 1;
+
+            font-size: 1.1cm;
+            font-weight: 700;
+            line-height: 105%;
+
+            margin: 0.7cm 0.8cm;
+        }
+
+        .name div {
+            margin: 0 0 0.7cm;
+            border-bottom: 1px dotted #888;
+        }
+
+        .name div.noborder {
+            border: none;
+        }
+
+        .details {
+            width: 5cm;
+            font-weight: 600;
+            color: #2E75B6;
+        }
+
+        .labpi {
+            margin: 0.8cm 0 0;
+            font-size: 0.7cm;
+            line-height: 105%;
+        }
+
+        .lab {
+            margin-top: 0.1cm;
+            font-size: 0.5cm;
+            text-transform: uppercase;
+        }
+
+        .location {
+            font-size: 2.75cm;
+            margin: 6mm 0 0 -1.7mm;
+            line-height: 100%;
+
+            /* font-family: interstate-mono, monospace; */
+            font-family: 'Noto Sans Mono', monospace;
+            font-weight: 700;
+            font-style: normal;
+            letter-spacing: -2mm;
+        }
+
+        .instructions {
+            text-align: center;
+            margin-top: 10mm;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="nametag">
+        <div class="name">
+            <div contenteditable="True">Gigglefeather Bongoride</div>
+            <div contenteditable="True">Maximian Ovid</div>
+            <div contenteditable="True">Canute Zoroaster</div>
+        </div>
+        <div class="details">
+            <div class="labpi">
+                <span contenteditable="true" style="font-weight:600">Ibrahim</span> <span contenteditable="true" style="font-weight: normal">Lab</span>
+            </div>
+            <div class="lab" contenteditable="true">Hotdesk</div>
+            <div class="location" contenteditable="true">
+                P1
+            </div>
+        </div>
+    </div>
+
+    <p class="instructions">
+        This template was optimized for Chromium browsers like Edge and Chrome.<br>Print in Landscape at 100% size. Final output should be 215 x 64 mm.<br><br>
+        If there's trouble with rendering, try this page in Incognito / Private browsing mode to exclude interference from add-ons.
+    </p>
+
+    <script>
+        document.querySelectorAll('.name div').forEach(el => {
+            el.addEventListener('input', e => {
+                if (e.target.innerText.trim() == '') {
+                    e.target.classList.add('noborder');
+                }
+                else {
+                    e.target.classList.remove('noborder');
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
