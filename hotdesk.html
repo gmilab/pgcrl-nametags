@@ -6,7 +6,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+Mono:wght@700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+Mono:wght@700&family=Roboto+Condensed:wght@700&display=swap"
         rel="stylesheet">
     <style>
         body {
@@ -65,10 +65,15 @@
         .name div {
             margin: 0 0 0.7cm;
             border-bottom: 1px dotted #888;
+            white-space: nowrap;
         }
 
         .name div.noborder {
             border: none;
+        }
+
+        .name div.condensed {
+            font-family: 'Roboto Condensed', sans-serif;
         }
 
         .details {
@@ -140,6 +145,11 @@
                 }
                 else {
                     e.target.classList.remove('noborder');
+                }
+
+                e.target.classList.remove('condensed');
+                if (e.target.scrollWidth > 563) {
+                    e.target.classList.add('condensed');
                 }
             });
         });
