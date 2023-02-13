@@ -59,7 +59,7 @@
             font-weight: 700;
             line-height: 105%;
 
-            margin: 0.7cm 0.8cm;
+            margin: 0.7cm 1.5cm 0.7cm 0.8cm;
         }
 
         .name div {
@@ -104,6 +104,8 @@
             font-weight: 700;
             font-style: normal;
             letter-spacing: -2mm;
+
+            text-transform: uppercase;
         }
 
         .instructions {
@@ -125,7 +127,7 @@
             <div class="labpi">
                 <span contenteditable="true" style="font-weight:600">Ibrahim</span> <span contenteditable="true" style="font-weight: normal">Lab</span>
             </div>
-            <div class="lab" contenteditable="true">Hotdesk</div>
+            <div class="lab" contenteditable="true">Shared Desk</div>
             <div class="location" contenteditable="true">
                 P1
             </div>
@@ -148,7 +150,7 @@
                 }
 
                 e.target.classList.remove('condensed');
-                if (e.target.scrollWidth > 563) {
+                if (e.target.scrollWidth > 537) {
                     e.target.classList.add('condensed');
                 }
             });
