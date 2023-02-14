@@ -95,8 +95,22 @@
         }
 
         .instructions {
-            text-align: center;
+            /* text-align: center; */
             margin-top: 10mm;
+        }
+
+        .hidden {
+            opacity: 25%;
+        }
+
+        @media not screen {
+            .instructions {
+                display: none;
+            }
+
+            .hidden {
+                display: none;
+            }
         }
     </style>
 
@@ -117,11 +131,39 @@
             </div>
         </div>
     </div>
+    <div class="nametag">
+        <div class="name" contenteditable="true">
+            Khari<br>Revera
+        </div>
+        <div class="details">
+            <div class="labpi" contenteditable="true">
+                Ibrahim
+            </div>
+            <div class="lab" contenteditable="true">Lab</div>
+            <div class="location" contenteditable="true">
+                P1
+            </div>
+        </div>
+    </div>
 
     <p class="instructions">
-        This template was optimized for Chromium browsers like Edge and Chrome.<br>Print in Landscape at 100% size. Final output should be 215 x 64 mm.<br><br>
-        If there's trouble with rendering, try this page in Incognito / Private browsing mode to exclude interference from add-ons.
+        <b>Print in Landscape at 100% size. Final output should be 215 x 64 mm.</b><br>
+        This template was optimized for Chromium browsers like Edge and Chrome.<br><br>
+        If there's trouble with rendering, try this page in Incognito / Private browsing mode to exclude interference from add-ons.<br><br>
+        Clear the name from the bottom nametag to hide it.
     </p>
+
+        <script>
+        document.querySelectorAll('.name').forEach(el => {
+            el.addEventListener('input', e => {
+                if (e.target.innerText.length == 0) {
+                    e.target.closest('div.nametag').classList.add('hidden');
+                } else {
+                    e.target.closest('div.nametag').classList.remove('hidden');
+                }
+            });
+        });
+</script>
 </body>
 
 </html>
