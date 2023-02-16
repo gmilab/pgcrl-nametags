@@ -112,12 +112,27 @@
           display: none;
         }
       }
+
+      @media print {
+        /* html,
+        body {
+          height: 100%;
+          width: 100%;
+          margin: 0;
+          padding: 0;
+        } */
+        @page {
+          size: letter landscape;
+          height: 100%;
+          width: 100%;
+        }
+      }
     </style>
   </head>
 
   <body>
     <div class="nametag">
-      <div class="name" contenteditable="true">Simeon<br />Wong</div>
+      <div class="name" contenteditable="true">Tony<br />Stark</div>
       <div class="details">
         <div class="labpi" contenteditable="true">Ibrahim</div>
         <div class="lab" contenteditable="true">Lab</div>
@@ -125,7 +140,7 @@
       </div>
     </div>
     <div class="nametag">
-      <div class="name" contenteditable="true">Khari<br />Revera</div>
+      <div class="name" contenteditable="true">Carol<br />Danvers</div>
       <div class="details">
         <div class="labpi" contenteditable="true">Ibrahim</div>
         <div class="lab" contenteditable="true">Lab</div>
