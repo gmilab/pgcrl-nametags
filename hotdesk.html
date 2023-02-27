@@ -206,10 +206,10 @@
           const el = e.target;
           if (el.innerText.trim() == "") {
             el.classList.add("noborder");
-            hideIfEmpty(el);
           } else {
             el.classList.remove("noborder");
           }
+          hideIfEmpty(el);
 
           el.classList.remove("condensed");
           if (el.scrollWidth > 537) {
