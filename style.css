@@ -1,0 +1,121 @@
+html,
+body {
+    /* font-family: neue-haas-grotesk-text, sans-serif; */
+    font-family: "Inter", sans-serif;
+    max-width: 11in;
+    max-height: 8.5in;
+    margin: 0;
+    padding: 0;
+}
+
+.nametag {
+    height: 64mm;
+    width: 215mm;
+    margin: 3em auto;
+    position: relative;
+    border: 0.5em solid white;
+    display: flex;
+    outline: 1em solid white;
+    outline-offset: -1em;
+}
+
+.nametag:before,
+.nametag:after {
+    position: absolute;
+    content: "";
+    border: solid black;
+    z-index: -1;
+}
+
+.nametag:before {
+    top: -2em;
+    bottom: -2em;
+    left: 0;
+    right: 0;
+    border-width: 0 0.5px;
+}
+
+.nametag:after {
+    left: -2em;
+    right: -2em;
+    top: 0;
+    bottom: 0;
+    border-width: 0.5px 0;
+}
+
+.name {
+    align-self: stretch;
+    flex-grow: 1;
+
+    /* font-size: 1.7cm; // set below */
+    font-weight: 700;
+    line-height: 105%;
+
+    margin: 0.7cm 0.8cm;
+    white-space: nowrap;
+}
+
+.details {
+    width: 5cm;
+    color: #2e75b6;
+}
+
+.labpi {
+    margin: 0.8cm 0 0;
+    font-size: 0.8cm;
+    line-height: 105%;
+    font-weight: 700;
+}
+
+.lab {
+    font-size: 0.8cm;
+    font-weight: normal;
+}
+
+.location {
+    font-size: 2.75cm;
+    margin: 4mm 0 0 -1.7mm;
+    line-height: 100%;
+
+    /* font-family: interstate-mono, monospace; */
+    font-family: "Noto Sans Mono", monospace;
+    font-weight: 700;
+    font-style: normal;
+    letter-spacing: -2mm;
+
+    text-transform: uppercase;
+}
+
+.instructions {
+    /* text-align: center; */
+    margin-top: 10mm;
+}
+
+.hidden {
+    opacity: 25%;
+}
+
+@media not screen {
+    .instructions {
+        display: none;
+    }
+
+    .hidden {
+        display: none;
+    }
+}
+
+@media print {
+
+    /* html,
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+} */
+    @page {
+        size: 11in 8.5in;
+        margin: 0;
+    }
+}
