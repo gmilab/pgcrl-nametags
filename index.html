@@ -9,11 +9,13 @@
       rel="stylesheet"
     />
     <style>
-      body {
+      html, body {
         /* font-family: neue-haas-grotesk-text, sans-serif; */
         font-family: "Inter", sans-serif;
-        max-width: 10in;
-        max-height: 7.5in;
+        max-width: 11in;
+        max-height: 8.5in;
+        margin:0;
+        padding:0;
       }
 
       .nametag {
@@ -122,9 +124,8 @@
           padding: 0;
         } */
         @page {
-          size: letter landscape;
-          height: 100%;
-          width: 100%;
+          size: 11in 8.5in;
+          margin: 0;
         }
       }
     </style>
@@ -164,8 +165,9 @@
 
         el.addEventListener("input", (e) => {
           const el = e.target;
-          if (el.innerText.length == 0) {
+          if (el.innerText.trim().length == 0) {
             el.closest("div.nametag").classList.add("hidden");
+
           } else {
             el.closest("div.nametag").classList.remove("hidden");
           }
