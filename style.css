@@ -55,6 +55,31 @@ body {
     white-space: nowrap;
 }
 
+.hotdesk .name {
+    align-self: stretch;
+    flex-grow: 1;
+
+    font-size: 1.1cm;
+    font-weight: 700;
+    line-height: 105%;
+
+    margin: 0.7cm 1.5cm 0.7cm 0.8cm;
+}
+
+.hotdesk .name div {
+    margin: 0 0 0.7cm;
+    border-bottom: 1px dotted #2e74b66d;
+    white-space: nowrap;
+}
+
+.hotdesk .name div.noborder {
+    border: none;
+}
+
+.hotdesk .name div.condensed {
+    font-family: "Roboto Condensed", sans-serif;
+}
+
 .details {
     width: 5cm;
     color: #2e75b6;
